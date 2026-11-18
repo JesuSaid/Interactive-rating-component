@@ -3,38 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive rating component</title>
-
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Interactive rating component</title>
 </head>
 <body>
+  <main class="main">
+    <div class="rating">
+      <img src="./assets/images/icon-star.svg" alt="">
+      <h1 class="title rating__title">How did we do?</h1>
+      <p class="text rating__description">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+      <form>
+        <fieldset>
+          <legend>Rate your experience</legend>
+          <ol class="rating__options">
+            <li class="rating__pick">
+              <label class="rating__label" for="value-1">1</label>
+              <input class="rating__input" required type="radio" id="value-1" value="1" name="rating">
+            </li>
+            <li class="rating__pick">
+              <label class="rating__label" for="value-2">2</label>
+              <input class="rating__input" type="radio" id="value-2" value="2" name="rating">
+            </li>
+            <li class="rating__pick">
+              <label class="rating__label" for="value-3">3</label>
+              <input class="rating__input" type="radio" id="value-3" value="3" name="rating">
+            </li>
+            <li class="rating__pick">
+              <label class="rating__label" for="value-4">4</label>
+              <input class="rating__input" type="radio" id="value-4" value="4" name="rating">
+            </li>
+            <li class="rating__pick">
+              <label class="rating__label" for="value-5">5</label>
+              <input class="rating__input" type="radio" id="value-5" value="5" name="rating">
+            </li>
+          </ol>
+        </fieldset>
+        <button class="rating__submit" type="submit">Submit</button>
+      </form>
+    </div>
 
-  <!-- Rating state start -->
+    <div hidden class="thank-you">
+      <img src="./assets/images/illustration-thank-you.svg" alt="">
+      <p class="thank-you__result">You selected <span></span> out of 5</p>
+      <h1 class="title thank-you__title">Thank you!</h1>
+      <p class="text thank-you__description">We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
+    </div>
 
-  How did we do?
-
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
-
-  1 2 3 4 5
-
-  Submit
-
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
-  </footer>
+  </main>
 </body>
 </html>
