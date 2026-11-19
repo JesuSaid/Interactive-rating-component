@@ -1,0 +1,36 @@
+:root {
+    --font-family-base: Overpass, sans-serif;
+    --color-accent: hsl(25, 97%, 53%);
+    --color-background: hsl(216, 12%, 8%);
+    --color-surface: hsl(213, 19%, 18%);
+    --color-text-muted: hsl(217, 12%, 63%);
+    --color-title: hsl(0, 100%, 100%);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: var(--font-family-base);
+    color: var(--color-title);
+    background-color: var(--color-background);
+}
+
+.main {
+    background-color: var(--color-surface);
+}
+
+.text {
+    margin: 0;
+    font-size: 0.9375rem;
+}
+
+.rating__submit {
+    font-family: inherit;
+}
