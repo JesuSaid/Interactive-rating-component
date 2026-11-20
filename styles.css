@@ -3,9 +3,11 @@
     --color-accent: hsl(25, 97%, 53%);
     --color-background: hsl(216, 12%, 8%);
     --color-surface: hsl(213, 19%, 18%);
+    --color-surface-start: #232A34;
+    --color-surface-end: #171E27;
     --color-text-muted: hsl(217, 12%, 63%);
     --color-title: hsl(0, 100%, 100%);
-    --color-control: hsl(210, 19%, 18%);
+    --color-control: #262F38;
 }
 
 *, *::before, *::after {
@@ -25,22 +27,36 @@ body {
 }
 
 .main {
-    background-color: var(--color-surface);
+    background-image: radial-gradient(circle at 45% 0%, var(--color-surface-start), var(--color-surface-end));
     padding: 1.5rem;
-    max-width: 26rem;
+    max-width: 21rem;
     width: 100%;
+    min-block-size: 22.5rem;
     border-radius: 1rem;
 }
 
-.rating > img {
+.rating__star {
     background-color: var(--color-control);
     border-radius: 50%;
-    padding: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rating__star > img {
+    width: 0.875rem;
+    height: auto;
 }
 
 .title {
     margin: 0;
     font-size: 1.5rem;
+    line-height: 1.875rem;
+}
+
+.rating__title {
     padding-block: 1rem;
 }
 
@@ -48,7 +64,7 @@ body {
     margin: 0;
     font-size: 0.875rem;
     color: var(--color-text-muted);
-    line-height: 1.5714;
+    line-height: 1.375rem;
 }
 
 .rating__description {
@@ -102,6 +118,7 @@ legend {
     background-color: var(--color-control);
     color: var(--color-text-muted);
     font-weight: 700;
+    font-size: 0.875rem;
 }
 
 .rating__label:hover {
@@ -152,4 +169,32 @@ legend {
 .rating__submit:focus-visible {
     outline: 2px solid var(--color-title);
     outline-offset: 0.2rem;
+}
+
+.thank-you:not([hidden]) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.375rem;
+}
+
+.thank-you > img {
+    margin-block: 0.5rem;
+    width: 9rem;
+    height: auto;
+}
+
+.thank-you__result {
+    background-color: var(--color-control);
+    color: var(--color-accent);
+    border-radius: 1.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    margin-block: 1rem;
+    line-height: 1.375rem;
+}
+
+.thank-you__description {
+    margin-block-start: 1rem;
+    text-align: center;
 }
