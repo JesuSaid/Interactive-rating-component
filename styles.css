@@ -198,3 +198,46 @@ legend {
     margin-block-start: 1rem;
     text-align: center;
 }
+
+@media screen and (min-width: 49rem) {
+    .main {
+        padding: 2rem;
+        max-width: 25.75rem;
+        min-block-size: 26rem;
+        border-radius: 1.875rem;
+    }
+
+    .rating__star {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .rating__star > img {
+        width: 1.0625rem;
+    }
+
+    .title {
+        font-size: 1.75rem;
+        line-height: 2.1875rem;
+    }
+
+    .text {
+        font-size: 0.9375rem;
+        line-height: 1.5rem;
+    }
+
+    .rating__label {
+        font-size: 1rem;
+        width: 3.1875rem;
+        height: 3.1875rem;
+    }
+
+    .thank-you > img {
+        width: 10.125rem;
+    }
+
+    .thank-you__result {
+        font-size: 0.9375rem;
+        line-height: 1.5rem;
+    }
+}
